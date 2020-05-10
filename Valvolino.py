@@ -10,6 +10,7 @@ addTopicDefnProvider(topic_def, TOPIC_TREE_FROM_CLASS)
 
 if __name__ == '__main__':
     ex = wx.App()
+    ex.locale = wx.Locale(wx.LANGUAGE_ENGLISH)
     eng = Valvolino()
     gui = ValvolinoGUI(parent=None, channels=4)
     ex.MainLoop()
