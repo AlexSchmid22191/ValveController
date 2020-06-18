@@ -16,9 +16,9 @@ def in_main_thread(func):
 
 class ValvolinoGUI(wx.Frame):
     def __init__(self, channels, *args, **kwargs):
-        super().__init__(title='Valvolino', style=wx.DEFAULT_FRAME_STYLE, *args, **kwargs)
+        super().__init__(title='Valve Controller', style=wx.DEFAULT_FRAME_STYLE, *args, **kwargs)
 
-        self.SetIcon(wx.Icon('Icons/Icon.jpg'))
+        self.SetIcon(wx.Icon('Icons/Logo.ico'))
 
         self.channels = channels
 
