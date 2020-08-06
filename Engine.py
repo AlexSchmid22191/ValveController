@@ -1,3 +1,4 @@
+import time
 from functools import wraps
 from threading import Thread, Lock
 
@@ -35,6 +36,7 @@ class Valvolino(Serial):
             self.port = port
         try:
             self.open()
+            time.sleep(1)
             sendMessage(topicName='ETG_status', text='Valvolino connected')
         except SerialException:
             sendMessage(topicName='ETG_status', text='Serial connection error')
