@@ -5,12 +5,13 @@ import random
 import time
 
 # Adjust manually
-valvo = Valvolino.Valvolino(port='/dev/ttyUSB0')
+valvo = Valvolino.Valvolino(port='COM11')
 
-time.sleep(3)
+time.sleep(1)
 
 while True:
-    for i in range(1, 5):
-        valvo.toggle_valve(i)
-        time.sleep(random.random()/10)
-#    time.sleep(random.random())
+    valvo.toggle_valve(1)
+    valvo.toggle_valve(2)
+    valvo.toggle_valve(3)
+    valvo.toggle_valve(4)
+    time.sleep(random.random()/10)

@@ -23,7 +23,7 @@ class CVC:
                     self.instructions.append([functools.partial(time.sleep, seconds), seconds, 'W'])
                 elif line.startswith('toggle'):
                     valve = int(line.split(',')[1].split('V')[-1])
-                    self.instructions.append([lambda: self.engine.toggle_valve(valve), valve, 'T'])
+                    self.instructions.append([functools.partial(self.engine.toggle_valve, valve), valve, 'T'])
             print('Total runtime: {:s}'.format(str(self.runtime)))
 
     def execute(self):
